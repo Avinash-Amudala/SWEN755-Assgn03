@@ -25,7 +25,7 @@ public class SalesReader implements Runnable {
             while ((line = reader.readLine()) != null) {
                 if (line.contains("SalesAmount")) continue; // Skip header line
                 String[] data = line.split(",");
-                totalSales += Double.parseDouble(data[2]); // Assuming SalesAmount is in the third column
+                totalSales += Double.parseDouble(data[2]); // SalesAmount is in the third column
             }
             salesDataStore.addSales(storeName, month, totalSales);
         } catch (IOException e) {
