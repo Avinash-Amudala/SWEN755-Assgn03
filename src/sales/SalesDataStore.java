@@ -4,6 +4,10 @@ import java.util.HashMap;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.Map;
 
+/**
+ * This class serves as a thread-safe storage for sales data. It allows concurrent
+ * modification and retrieval of sales records by store name and month.
+ */
 public class SalesDataStore {
 
     // Store the sales data in a nested ConcurrentHashMap for thread safety
